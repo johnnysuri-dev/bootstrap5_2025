@@ -7,11 +7,15 @@
 </head>
 <body>
     <?php
-include "menu.php";
+    include "menu.php";
     ?>
-<div class="container">
-<h1>bienvenidos a registrar categorias</h1>
-</div>
-    
+    <div class="container">
+        <label for="">Lista estudiantes</label>
+        <div class="row">
+            <div class="col-md-6">
+
+            </div>
+        </div>
+    </div>
 </body>
 </html>

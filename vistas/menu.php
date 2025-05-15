@@ -19,24 +19,22 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" href="index.html">Inicio</a>
+                <a class="nav-link" href="index.php">Inicio</a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="practica2.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  practica2
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Gestor
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  <li><a class="dropdown-item" href="crearEstudiante.php">Registro Estudiante</a></li>
+                  <li><a class="dropdown-item" href="estudiante.php">Lista estudiante</a></li>
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link disabled" href="practica3.html" tabindex="-1" aria-disabled="true">Practica 3</a>
+                <a class="nav-link" href="crearProducto.php" tabindex="-1" aria-disabled="true">Crear Producto</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link disabled" href="practica4.html" tabindex="-1" aria-disabled="true">Practica 4</a>
+                <a class="nav-link" href="crearCliente.php" tabindex="-1" aria-disabled="true">Crear Cliente</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link disabled" href="practica5.html" tabindex="-1" aria-disabled="true">Practica 5</a>

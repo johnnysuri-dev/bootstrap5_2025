@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<?php
+    include "menu.php";
+?>
+<DIV class="container">
+<div class="row">
+
+<form method="POST" action="../controladores/crearProducto.php" >
+    <div class="form-group">
+        <label for="">Nombre</label>
+        <input type="text" class="form-control" name="nombre" required>
+    </div>
+    <div class="form-group">
+        <label for="">Descripcion</label>
+        <textarea class="form-control" name="descripcion"  id=""></textarea>
+    </div>
+    <div class="form-group">
+        <label for="">Fecha de registro</label>
+        <input type="Date" class="form-control" name="fecha" required>
+    </div>
+    <div class="form-group">
+        <label for="">Cantidad</label>
+        <input type="text" class="form-control" name="cantidad" required>
+    </div>
+    <div class="form-group">
+        <label for="">costo</label>
+        <input type="text" class="form-control" name="costo" required>
+    </div>
+    <div class="form-group">
+        <label for="">Codigo Barra</label>
+        <input type="text" class="form-control" name="codigo" required>
+    </div>
+    <div class="form-group">
+        <label for="">Selecciones categoria</label>
+        <select class="form-select" name="categoria" id="">
+
+            <?php
+            //llamar  a la conexion de base de datos
+                include('../modelos/conexion.php');
+
+                //consulta de query mostrar datos
+                $query="SELECT `id_Categoria`, `Nombre` FROM `categoria`";
+                //asegurar la conexion ennviando la consulta
+                $res=$conexion->query($query);
+                //recorer todas la columnas
+                if($res->num_rows>0){
+                        $combobit="";
+                        //comparamos mientras existan los datos
+                        while($row=$res->fetch_array(MYSQLI_ASSOC))
+                        {
+                            //almacer en una varia los campos
+                            $combobit="<option value=".$row['id_Categoria'].">".$row['Nombre']."</option>";
+                            echo $combobit;
+
+                        }
+
+                }else
+                {
+                        echo "No hay ningun datos para mostrar";
+                }
+            ?>
+         </select>
+    </div>
+
+    <br>
+    <button class="btn btn-primary" name="add_producto">Guadar</button>
+</form>
+
+
+</div>
+
+</DIV>
+
+    
+</body>
+</html>
