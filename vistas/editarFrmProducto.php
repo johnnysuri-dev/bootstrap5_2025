@@ -24,14 +24,14 @@
                $row= $res->fetch_assoc()
             ?>
 
-<form method="POST" action="../controladores/crearProducto.php" >
+<form method="POST" action="../controladores/editarProducto.php?ide=<?php echo $row['Id_Producto']; ?>">
     <div class="form-group">
         <label for="">Nombre</label>
         <input type="text" class="form-control" name="nombre" value="<?php echo $row['Nombre']; ?>">
     </div>
     <div class="form-group">
         <label for="">Descripcion</label>
-        <input type="text" class="form-control" name="fecha" value="<?php echo $row['Descripción']; ?>" required>
+        <input type="text" class="form-control" name="descripcion" value="<?php echo $row['Descripción']; ?>" required>
 
     </div>
     <div class="form-group">
